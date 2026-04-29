@@ -4,6 +4,17 @@
 #define STB_IMAGE_IMPLEMENTATION
 #include "../include/stb/stb_image.h"
 
+unsigned char  *GenerateHeight  map(const std::string &filePath, int &width, int &height, int &channels) {
+    unsigned char *data = stbi_load(filePath.c_str(), &width, &height, &channels, 0);
+    /* 
+        Go through the picture
+        For each pixel, convert the RGB value to a greyscale height value
+        Store new pixel colr in a new array
+        Output the new array as a heightmap image 
+    
+    */
+    return data;
+}
 
 int main() {
     //Take in a user input for the file path of the image to load
@@ -41,7 +52,7 @@ int main() {
 
         std::cout << "Loaded image successfully: " << std::endl;
 
-        
+        GenerateHeightmap
 
         stbi_image_free(data);
         break;
