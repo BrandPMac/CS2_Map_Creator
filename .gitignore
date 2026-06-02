@@ -34,6 +34,9 @@
 # Output files
 outputs/
 
+# Input files
+inputs/
+
 # VS Code settings
 .vscode/c_cpp_properties.json
 
