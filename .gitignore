@@ -30,3 +30,11 @@
 *.exe
 *.out
 *.app
+
+# Output files
+outputs/
+
+# VS Code settings
+.vscode/c_cpp_properties.json
+
+
