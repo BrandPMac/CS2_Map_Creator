@@ -76,6 +76,11 @@ int main() {
             return 0;
         }
 
+        // If just a filename is given, default to inputs folder
+        if (filePath.find('\\') == std::string::npos && filePath.find('/') == std::string::npos) {
+            filePath = "inputs/" + filePath;
+        }
+
         std::filesystem::path path(filePath);
         if (!std::filesystem::exists(path)) {
             std::cerr << "Error: File does not exist: " << filePath << std::endl;
